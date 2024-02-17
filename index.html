@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUDGT TRAVEL</title>
+
+    <!-- tailwind daisy ui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+
+  <body class="font-poppins">
+    <header class="bg-slate-400">
+      <div class="container mx-auto flex justify-around items-center pt-5 pb-5">
+        <img class="w-24" src="./images/logo.png" alt="" />
+
+        <div class="flex justify-center items-center ">
+          <h2 id="card-count" class="text-4xl font-medium text-red-600 pb-12">0</h2>
+          <img class="w-16" src="./images/cart.png" alt="" />
+        </div>
+        <h1 class="text-2xl font-medium">Home</h1>
+        <h1 class="text-2xl font-medium">Setting</h1>
+
+        <img class="w-16" src="./images/man.png" alt="" />
+      </div>
+    </header>
+
+    <main class="">
+      <!-- bannar section -->
+      <div class="container mx-auto flex justify-center items-center">
+        <div class="text-black w-[50%] space-y-4">
+          <h1 class="text-6xl font-bold">Lets Travel</h1>
+          <p class="font-medium">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, ipsam laudantium? Laboriosam sequi nesciunt illo
+            veritatis et deleniti in. Repellendus quod quia deserunt amet, sint
+            nobis aliquid unde animi voluptatem?
+          </p>
+          <p class="text-4xl font-bold">Total Budgt: <span id="budgt">900</span> $</p>
+        </div>
+
+        <div class="w-[50%] flex justify-center items-center">
+          <img cl src="./images/banner.png" alt="" />
+        </div>
+      </div>
+
+      <!-- card section -->
+
+      <div class="flex px-12">
+
+        <div class="space-y-5 ">
+          <div class="card card-side bg-base-100 shadow-xl">
+            <img class="rounded-xl max-w-[620px] " src="./images/shajek.jpg" alt="" />
+            <div class="card-body">
+              <h2 class="card-title text-3xl ">Shajek</h2>
+              <h4 class="text-2xl font-medium">Cost: <span class="price">300</span>$</p>
+
+              <div class="card-actions">
+                <button  class="bg-slate-800 BTN text-white px-4 py-2 rounded-md">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card card-side bg-base-100 shadow-xl">
+            <img class="rounded-xl " src="./images/Dhaka.jpg" alt="" />
+            <div class="card-body">
+              <h2 class="card-title text-3xl">Dhaka</h2>
+              <h4 class="text-2xl font-medium">Cost: <span class="price">300</span>$</p>
+
+              <div class="card-actions">
+                <button  class="bg-slate-800 BTN text-white px-4 py-2 rounded-md">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card card-side bg-base-100 shadow-xl">
+            <img class="rounded-xl" src="./images/shundar-ban.jpg" alt="" />
+            <div class="card-body">
+              <h2 class="card-title text-3xl">Khulna</h2>
+              <h4 class="text-2xl font-medium">Cost: <span class="price">300</span>$</p>
+
+              <div class="card-actions">
+                <button  class="bg-slate-800 BTN text-white px-4 py-2 rounded-md">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card card-side bg-base-100 shadow-xl">
+            <img class="rounded-xl" src="./images/shundar-ban.jpg" alt="" />
+            <div class="card-body">
+              <h2 class="card-title text-3xl">Sundarban</h2>
+              <h4 class="text-2xl font-medium">Cost: <span class="price">300</span>$</p>
+
+              <div class="card-actions">
+                <button  class="bg-slate-800 BTN text-white px-4 py-2 rounded-md">
+                  Add to Cart
+                </button>  
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- calculation section -->
+        <div class="flex-1 shadow-md ml-10">
+          <h1 class="text-3xl font-medium">Cart</h1>
+
+          <hr />
+
+          <div id="itile-container"></div>
+          <!-- <ul id="selected-container" class="place-container">
+
+          </ul> -->
+          <hr />
+
+          <h4 class="text-2xl font-medium ">Total cost: <span id="total-cost">0</span>$</h4>
+
+          <div class="flex gap-2 text-white  ">
+
+            <button onclick="grandTotal('bus')" class="text-2xl font-medium bg-slate-600 rounded-sm px-2 py-1">Bus +100</button>
+            <button onclick="grandTotal('train')" class="text-2xl font-medium bg-slate-600 rounded-sm px-2 py-1">Train -200</button>
+            <button onclick="grandTotal('flight')" class="text-2xl font-medium bg-slate-600 rouded-sm px-2 py-1">Train +500</button>
+
+          </div>
+          <hr>
+
+          <h1 class="text-2xl font-medium">Grand Total: <span id="grand-total">0</span> $</h1>
+
+        </div>
+
+      </div>
+
+
+    </main>
+
+    <!-- js file here babe's!!! -->
+    <script src="./js-file/utility.js"></script>
+  </body>
+</html>
